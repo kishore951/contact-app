@@ -1,14 +1,27 @@
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row">
-                <div *ngFor="let i of contactList" class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
+            <div class="row g-3">
+                <div *ngFor="let i of contactList.data" class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
 
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img  height="150 px" src="{{i.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text"></p>
+                          <h5 class="card-title">{{i.name}}</h5>
+                          <p class="card-text">{{i.email}}</p>
+                          <p class="card-text">{{i.vat}}</p>
+                          <p class="card-text">{{i.phone}}</p>
+                          <p class="card-text">{{i.country}}</p>
+                          <p class="card-text">{{i.addresses[0].street}}</p>
+                          <p class="card-text">{{i.addresses[0].streetName}}</p>
+                          <p class="card-text">{{i.addresses[0].buildingNumber}}</p>
+                          <p class="card-text">{{i.addresses[0].city}}</p>
+                          <p class="card-text">{{i.addresses[0].zipcode}}</p>
+                          <p class="card-text">{{i.addresses[0].country}}</p>
+                          <p class="card-text">{{i.addresses[0].county_code}}</p>
+                          <p class="card-text">{{i.addresses[0].latitude}}</p>
+                          <p class="card-text">{{i.addresses[0].longitude}}</p>
+                          <a href="#" class="btn btn-primary">{{i.website}}</a>
                           
                         </div>
                       </div>
